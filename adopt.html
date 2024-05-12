@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<style>
+    .navbar {
+        background-color: #F0544F;
+        color: white;
+    }
+    
+    .logo {
+        font-family: 'Beth Ellen';
+    }
+    
+    .centered-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        max-width: 600px;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        color: #333;
+    }
+    
+    #tabcontainer a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    #tabcontainer a:hover {
+        color: #FFFFFF;
+    }
+    
+    .special-text {
+        font-family: sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #ff6600;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
+        gap: 20px;
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    .box {
+        width: 250px;
+        box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+    }
+
+    .filter-container {
+        margin-bottom: 20px;
+    }
+
+    .filter-checkbox {
+        margin-right: 10px;
+    }
+
+    .pet-card {
+        width: 100%; /* Adjust the width as needed */
+        max-width: 300px; /* Maximum width for the pet cards */
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .pet-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .pet-info {
+        margin-top: 10px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #F0544F;
+        color: white;
+    }
+
+    header .logo {
+        font-family: 'Beth Ellen';
+        font-size: 24px;
+        margin: 0;
+    }
+
+    header #tabcontainer {
+        display: flex;
+        gap: 20px;
+    }
+
+    footer {
+        background-color: #F0544F;
+        color: white;
+        padding: 30px 0;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .column {
+        width: 45%;
+    }
+
+    footer .column h6 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .column {
+    width: 45%;
+    text-align: center; /* Center the text within the column */
+}
+
+footer ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+}
+
+footer li {
+    margin: 5px 0; /* Add some vertical spacing between list items */
+}
+
+</style>
+<body>
+<header>
+    <h1 class="logo">Skylos</h1>
+    <div id="tabcontainer">
+        <a href="adopt.html">Adopt</a>
+        <a href="RehomeForm.html">Report</a>
+        <a href="petabout.html">About</a>
+    </div>
+</header>
+
+<div class="filter-container">
+    <button type="button" class="btn btn-default btn-sm" onclick="toggleDropdown()">
+        <span class="glyphicon glyphicon-filter"></span> Filter By
+    </button>
+    <div id="filterDropdownContent" style="display: none;">
+        <h3>Type</h3>
+        <label>
+            <input type="checkbox" class="filter-checkbox" onchange="filterAnimals('all')" /> All
+        </label>
+        <label>
+            <input type="checkbox" class="filter-checkbox" onchange="filterAnimals('dog')" /> Dogs
+        </label>
+        <label>
+            <input type="checkbox" class="filter-checkbox" onchange="filterAnimals('cat')" /> Cats
+        </label>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Pet cards with details -->
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="dog1.jpg" alt="Ginger">
+        </a>
+        <div class="pet-info">
+            <h3>Ginger</h3>
+            <p>A happy tabby cat with a love for fooling around</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat2.jpeg" alt="Kristy">
+        </a>
+        <div class="pet-info">
+            <h3>Kristy</h3>
+            <p>A fun and active cat! </p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat3.jpg" alt="Menace">
+        </a>
+        <div class="pet-info">
+            <h3>Menace</h3>
+            <p>Just the name! She is the sweetest!</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat4.jpg" alt="Georgie">
+        </a>
+        <div class="pet-info">
+            <h3>Georgie</h3>
+            <p>Looks like he is a nerd. Is a nerd. Perfect partner for your lectures.</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat5.jpeg" alt="Katniss">
+        </a>
+        <div class="pet-info">
+            <h3>Katniss</h3>
+            <p>Looks like a cinnamon roll, is a cinnamon roll</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat6.jpeg" alt="Roxy">
+        </a>
+        <div class="pet-info">
+            <h3>Roxy</h3>
+            <p>Loves to cuddle and roam around!</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat7.jpeg" alt="Mia">
+        </a>
+        <div class="pet-info">
+            <h3>Mia</h3>
+            <p>Keep her warm and cozy! She will love you!</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat8.png" alt="Bluestar">
+        </a>
+        <div class="pet-info">
+            <h3>Bluestar</h3>
+            <p>Has the most adorable eyes and can trick you into giving more treats!</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat9.jpeg" alt="Nightshade">
+        </a>
+        <div class="pet-info">
+            <h3>Nightshade</h3>
+            <p>Loves to play hide and seek. Loves sunshine and cuddles!</p>
+        </div>
+    </div>
+
+    <div class="pet-card cat">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="cat10.jpg" alt="Princess">
+        </a>
+        <div class="pet-info">
+            <h3>Princess</h3>
+            <p>Looks like a baddie, but is a softie inside. Just give her tiny treates!</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="Pongsatorn-Singnoy.jpg" alt="Max">
+        </a>
+        <div class="pet-info">
+            <h3>Max</h3>
+            <p>An actual sweetheart. Will keep your feet warm by snuggling!</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="pug.jpeg" alt="Charlie">
+        </a>
+        <div class="pet-info">
+            <h3>Charlie</h3>
+            <p>Just look at that adorable face! How can one resist patting him</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="chihuahua.jpeg" alt="Luna">
+        </a>
+        <div class="pet-info">
+            <h3>Luna</h3>
+            <p>Has the cute ruff and the most hyper vibe! You will love her energy!</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="affenpinscher.jpeg" alt="Milo">
+        </a>
+        <div class="pet-info">
+            <h3>Milo</h3>
+            <p>Just looking at hime is guaranteed to make you happy. Remember to cuddle with him and tell him he is a good boy!</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="dog2.jpeg" alt="Luke">
+        </a>
+        <div class="pet-info">
+            <h3>Luke</h3>
+            <p>Looks like a baddie, is a baddie. But he loves fully and unconditionally. The perfect partner in crime!</p>
+        </div>
+    </div>
+
+    <div class="pet-card dog">
+        <a href="http://127.0.0.1:3000/application.html">
+            <img class="pet-image" src="dog3.jpg" alt="Candy">
+        </a>
+        <div class="pet-info">
+            <h3>Candy</h3>
+            <p>Sweet, fun loving and affectionate. Loves to go on walks and play fetch!</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+  <div class="container">
+      <div class="column">
+          <h6 style="text-align: center;">RESOURCES</h6>
+          <ul>
+              <li>Why Adopt an Animal</li>
+              <li>Rehome a Pet or Report a Found</li>
+              <li>Animal</li>
+              <li>How You Can Volunteer for Shelters</li>
+              <li>in Your Area</li>
+          </ul>
+      </div>
+      <div class="column">
+          <h6 style="text-align: center;">CONTACT</h6>
+          <ul>
+              <li><i class="fas fa-home me-3 text-secondary"></i> The Skylos Foundation</li>
+              <li><i class="fas fa-home me-3 text-secondary"></i></li>
+              <li><i class="fas fa-envelope me-3 text-secondary"></i>info@theskylosfoundation.com</li>
+              <li><i class="fas fa-phone me-3 text-secondary"></i>+ 91 9446440167</li>
+              <li><i class="fas fa-phone me-3 text-secondary"></i>+ 91 8282409044</li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Pet Name</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Pet details will be displayed here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Sample pet data (replace with your actual data)
+    const petsData = [
+        {
+            name: 'Ginger',
+            type: 'cat',
+            image: 'dog1.jpg',
+            description: 'A happy tabby cat with a love for fooling around',
+        },
+        {
+            name: 'Kristy',
+            type: 'cat',
+            image: 'cat2.jpeg',
+            description: 'A fun and active cat! ',
+        },
+        {
+            name: 'Menace',
+            type: 'cat',
+            image: 'cat3.jpg',
+            description: 'Just the name! She is the sweetest!',
+        },
+        {
+            name: 'Georgie',
+            type: 'cat',
+            image: 'cat4.jpg',
+            description: 'Looks like he is a nerd. Is a nerd. Perfect partner for your lectures.',
+        },
+        {
+            name: 'Katniss',
+            type: 'cat',
+            image: 'cat5.jpeg',
+            description: 'Looks like a cinnamon roll, is a cinnamon roll',
+        },
+        {
+            name: 'Roxy',
+            type: 'cat',
+            image: 'cat6.jpeg',
+            description: 'Loves to cuddle and roam around!',
+        },
+        {
+            name: 'Mia',
+            type: 'cat',
+            image: 'cat7.jpeg',
+            description: 'Keep her warm and cozy! She will love you!',
+        },
+        {
+            name: 'Bluestar',
+            type: 'cat',
+            image: 'cat8.png',
+            description: 'Has the most adorable eyes and can trick you into giving more treats!',
+        },
+        {
+            name: 'Nightshade',
+            type: 'cat',
+            image: 'cat9.jpeg',
+            description: 'Loves to play hide and seek. Loves sunshine and cuddles!',
+        },
+        {
+            name: 'Princess',
+            type: 'cat',
+            image: 'cat10.jpg',
+            description: 'Looks like a baddie, but is a softie inside. Just give her tiny treates!',
+        },
+        {
+            name: 'Max',
+            type: 'dog',
+            image: 'Pongsatorn-Singnoy.jpg',
+            description: 'An actual sweetheart. Will keep your feet warm by snuggling!',
+        },
+        {
+            name: 'Charlie',
+            type: 'dog',
+            image: 'pug.jpeg',
+            description: 'Just look at that adorable face! How can one resist patting him',
+        },
+        {
+            name: 'Luna',
+            type: 'dog',
+            image: 'chihuahua.jpeg',
+            description: 'Has the cute ruff and the most hyper vibe! You will love her energy!',
+        },
+        {
+            name: 'Milo',
+            type: 'dog',
+            image: 'affenpinscher.jpeg',
+            description: 'Just looking at hime is guaranteed to make you happy. Remember to cuddle with him and tell him he is a good boy!',
+        },
+        {
+            name: 'Luke',
+            type: 'dog',
+            image: 'dog2.jpeg',
+            description: 'Looks like a baddie, is a baddie. But he loves fully and unconditionally. The perfect partner in crime!',
+        },
+        {
+            name: 'Candy',
+            type: 'dog',
+            image: 'dog3.jpg',
+            description: 'Sweet, fun loving and affectionate. Loves to go on walks and play fetch!',
+        },
+    ];
+
+    function createPetCard(pet) {
+        const petCard = document.createElement('div');
+        petCard.className = `pet-card ${pet.type}`;
+        petCard.innerHTML = `
+        <a href="adoptform.html">
+            <img class="pet-image" src="${pet.image}" alt="${pet.name}">
+        </a>
+        <div class="pet-info">
+          <h3>${pet.name}</h3>
+          <p>${pet.description}</p>
+        </div>
+      `;
+        petCard.addEventListener('click', () => {
+            showModal(pet);
+        });
+        return petCard;
+    }
+
+    function showModal(pet) {
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        modalTitle.textContent = pet.name;
+        modalBody.innerHTML = `<img class="pet-image" src="${pet.image}" alt="${pet.name}">
+          <p>${pet.description}</p>`;
+        $('#myModal').modal('show');
+    }
+
+    function filterAnimals(category) {
+        const animalItems = document.getElementsByClassName('pet-card');
+
+        for (let i = 0; i < animalItems.length; i++) {
+            const item = animalItems[i];
+            const itemCategory = item.classList.contains('dog') ? 'dog' : 'cat';
+
+            if (category === 'all' || itemCategory === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const petContainer = document.querySelector('.container');
+        petsData.forEach(pet => {
+            const petCard = createPetCard(pet);
+            petContainer.appendChild(petCard);
+        });
+    });
+
+    function toggleDropdown() {
+        const dropdownContent = document.getElementById('filterDropdownContent');
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>
