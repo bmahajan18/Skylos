@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Form</title>
+    <link rel="stylesheet" href="application.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    
+
+</head>
+<body>
+    <script src="adopt-form.js"></script>
+<header>
+    <div class="navbar p-2 ps-3 pe-3">
+        <h1 class="logo">Skylos</h1>
+        <div id="tabcontainer" class="end-100 d-flex justify-content-end">
+            <a href="adopt.html" class="ps-3 pe-3">Adopt</a>
+            <a href="Rehome.html" class="ps-3 pe-3">Report</a>
+            <a href="petabout.html" class="ps-3 pe-3">About</a>
+        </div>
+    </div>
+</header>
+<div class="container my-5">
+    <div class="col-md-12 text-center my-5"><h1>How The Adoption Process Works</h1></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8 mx-auto">
+        <ol>
+            <li>
+                <strong>Fill out an Application:</strong> If you find a pet you're interested in, fill out an adoption application. This application helps the organization assess whether you're a suitable match for the pet's needs.<br><br>
+            </li>
+            <li>
+
+                <strong>Interview: </strong> Some organizations may conduct an interview to understand your living situation, lifestyle, experience with pets, and why you want to adopt.<br>
+                <strong>Screening: </strong> Organizations may perform background checks, contact references, and verify information to ensure responsible pet ownership.<br><br>
+            </li>
+            <li>
+                <strong>Home Visit: </strong>Some organizations may conduct a home visit to ensure that your living environment is suitable and safe for the pet.<br><br>
+            </li>
+            <li>
+                <strong>Approval: </strong>Once your application is approved, you'll receive confirmation that you can adopt the pet. This may include details about the adoption fee, if applicable.<br><br>
+            </li>
+        </ol>
+    </div>
+    <div class="col-md-2"></div>
+
+</div>
+
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center">
+            <div class="form-section formbox">
+                <form id="myForm">
+                    <h1>Adopt An Animal</h1>
+                    <div class="row mb-3 my-5">
+                        <div class="col-md-6 text-start">
+                            <label for="input-name" class="form-label text-start">Full Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="input-name">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label for="input-email" class="form-label text-start">Email Address</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="input-email">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label for="input-number" class="form-label text-start">Phone Number</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="input-number">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label for="input-address" class="form-label text-start">Address</label>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea class="form-control" id="input-address" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label for="input_select" class="form-label text-start">Family Income</label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select" id="input_select">
+                                <option value="1">below 1 Lakh</option>
+                                <option value="2">1 Lakh - 3 Lakh</option>
+                                <option value="3">3 lakh - 5 Lakh</option>
+                                <option value="4"> above 5 Lakh</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label class="form-label text-start">Owned Pets Before?</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="yes/no1" id="ans-yes1" value="Yes">
+                                <label class="form-check-label" for="ans-yes1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="yes/no1" id="ans-no1" value="No">
+                                <label class="form-check-label" for="ans-no1">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6 text-start">
+                            <label class="form-label text-start">Currently Own Any Pets?</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="yes/no2" id="ans-yes2" value="Yes">
+                                <label class="form-check-label" for="ans-yes2">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="yes/no2" id="ans-no2" value="No">
+                                <label class="form-check-label" for="ans-no2">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6 my-5">
+                            <input class="btn btn-primary" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<footer class="text-center text-lg-start text-white" style="background-color: #F0544F;">
+    <!-- Section: Links  -->
+    <div class="my-5">
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column for Resources -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <h1 class="my-5"></h1>
+                            <h6 class="text-uppercase fw-bold mb-4">RESOURCES</h6>
+                            <h6>Why Adopt an Animal</h6>
+                            <h6>Rehome a Pet or Report a Found</h6>
+                            <h6>Animal</h6>
+                            <h6>How You Can Volunteer for Shelters</h6>
+                            <h6>in Your Area</h6>
+                        </div>
+                    </div>
+                    <!-- Grid column for Contact -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <h1 class="my-5"></h1>
+                            <h6 class="text-uppercase fw-bold mb-4">CONTACT</h6>
+                            <h6><i class="fas fa-home me-3 text-secondary"></i> The Skylos Foundation</h6>
+                            <h6><i class="fas fa-home me-3 text-secondary"></i> </h6>
+                            <h6><i class="fas fa-envelope me-3 text-secondary"></i>info@theskylosfoundation.com</h6>
+                            <h6><i class="fas fa-phone me-3 text-secondary"></i>+ 91 9446......</h6>
+                            <h6><i class="fas fa-phone me-3 text-secondary"></i>+ 91 8282......</h6>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+    </div>
+    <!-- Section: Links  -->
+    <!-- Centered text element -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        <div class="container">
+            <p>&copy; 2024 The Skylos Foundation</p>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

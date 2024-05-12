@@ -1,0 +1,139 @@
+
+          .navbar {
+          background-color: #F0544F;
+          color: white;}
+.logo {
+            font-family: 'Beth Ellen';
+    }
+        .centered-text {
+           text-align: center;
+           margin-left: auto;
+           margin-right: auto;
+           width: 60%;
+           max-width: 600px; 
+           font-family: sans-serif;
+           font-size: 18px;
+           line-height: 1.6;
+           letter-spacing: 0.5px;
+           color: #333;
+        }
+        #tabcontainer a {
+            color: #FFFFFF; 
+            text-decoration: none; 
+            padding: 8px 15px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        #tabcontainer a:hover {
+             
+            color: #FFFFFF; 
+        }
+        .special-text {
+           font-family: sans-serif; 
+           font-size: 28px; 
+           font-weight: bold; 
+           color: #ff6600; 
+}
+    body {
+      font-family: 'Barlow', Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+    .jumbotron {
+      background: url('dog-287420_1280.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      text-align: left;
+      padding: 100px 0;
+      margin-bottom: 0;
+    }
+    .jumbotron .container {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .jumbotron .content {
+      padding-left: 15px;
+      margin-left: 0;
+    }
+    .jumbotron h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #c0392b;
+    }
+    .jumbotron p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      font-weight: 400;
+      color: #c0392b;
+    }
+    .btn-primary {
+      background-color: #e74c3c;
+      border-color: #e74c3c;
+    }
+    .btn-primary:hover {
+      background-color: #c0392b;
+      border-color: #c0392b;
+    }
+    .statistics-container {
+      margin-top: 0;
+      padding: 20px 0;
+      background-color: #f0544f;
+    }
+    .statistic {
+      text-align: center;
+      padding: 20px;
+    }
+    .statistic h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #fff;
+    }
+    .statistic p {
+      font-size: 1rem;
+      color: #fff;
+    }
+    .how-it-works {
+      padding: 50px 0;
+    }
+    .how-it-works h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .how-it-works p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+    .featured-animals {
+      padding: 50px 0;
+    }
+    .animal-card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .animal-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .animal-card p {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .adopt-now {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .adopt-now h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehome Form</title>
+    <link rel="stylesheet" href="rehomeForm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+ 
+  <header>
+    <div class="navbar p-2 ps-3 pe-3">
+        <h1 class="logo">Skylos</h1>
+        <div id="tabcontainer" class="end-100 d-flex justify-content-end">
+            <a href="adopt.html" class="ps-3 pe-3">Adopt</a>
+            <a href="Rehome.html" class="ps-3 pe-3">Report</a>
+            <a href="petabout.html" class="ps-3 pe-3">About</a>
+        </div>
+    </div>
+</header>
+
+</div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center">
+          <div class="form-section formbox">
+          <form id="myForm">
+            <h1>Report An Animal</h1>
+            <h3 class="my-5">Animal Description</h3>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input_select" class="form-label">Type of Animal</label>
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" id="input_select">
+                  <option value="1">Dog</option>
+                  <option value="2">Cat</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-breed" class="form-label">Breed</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-breed">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-size" class="form-label">Size/Approximate Weight</label>
+              </div>
+              <div class="col-md-6">
+                <input type="number" class="form-control" id="input-size">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-marking" class="form-label">Colour/Marking</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-marking">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-features" class="form-label">Distinctive Features and Characteristics</label>
+              </div>
+              <div class="col-md-6">
+                <textarea class="form-control" id="input-features" rows="2"></textarea>
+              </div>
+            </div>
+            <h3>Location</h3>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-location" class="form-label">Where The Animal Was Spotted</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-location">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-address" class="form-label">Address/Specific Location Details</label>
+              </div>
+              <div class="col-md-6">
+                <textarea class="form-control" id="input-address" rows="2"></textarea>
+              </div>
+            </div>
+            <h3>Contact Info</h3>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-name" class="form-label">Full Name</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-email" class="form-label">Email Address</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 text-start">
+                <label for="input-number" class="form-label">Phone Number</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="input-number">
+              </div>
+            </div>
+            <div class="row mb-3 my-5">
+              <div class="col-md-6 text-start">
+                <label class="form-label" for="customFile">Upload an Image of the Pet</label>
+              </div>
+              <div class="col-md-6">
+                <input type="file" class="form-control" id="customFile" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6"></div>
+              <div class="col-md-6 my-5">
+                <input class="btn btn-primary" type="submit" value="Submit">
+              </div>
+            </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <footer class="text-center text-lg-start text-white" style="background-color: #F0544F;">
+      <!-- Section: Links  -->
+      <div class="my-5">
+          <section class="">
+              <div class="container text-center text-md-start mt-5">
+                  <!-- Grid row -->
+                  <div class="row mt-3">
+                      <!-- Grid column for Resources -->
+                      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                          <div class="d-flex flex-column align-items-center">
+                              <h1 class="my-5"></h1>
+                              <h6 class="text-uppercase fw-bold mb-4">RESOURCES</h6>
+                              <h6>Why Adopt an Animal</h6>
+                              <h6>Rehome a Pet or Report a Found</h6>
+                              <h6>Animal</h6>
+                              <h6>How You Can Volunteer for Shelters</h6>
+                              <h6>in Your Area</h6>
+                          </div>
+                      </div>
+                      <!-- Grid column for Contact -->
+                      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                          <div class="d-flex flex-column align-items-center">
+                              <h1 class="my-5"></h1>
+                              <h6 class="text-uppercase fw-bold mb-4">CONTACT</h6>
+                              <h6><i class="fas fa-home me-3 text-secondary"></i> The Skylos Foundation</h6>
+                              <h6><i class="fas fa-home me-3 text-secondary"></i></h6>
+                              <h6><i class="fas fa-envelope me-3 text-secondary"></i>info@theskylosfoundation.com</h6>
+                              <h6><i class="fas fa-phone me-3 text-secondary"></i>+ 91 9446440167</h6>
+                              <h6><i class="fas fa-phone me-3 text-secondary"></i>+ 91 8282409044</h6>
+                          </div>
+                      </div>
+                      <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+              </div>
+          </section>
+      </div>
+      <!-- Section: Links  -->
+      <!-- Centered text element -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+          <div class="container">
+              <p>&copy; 2023 The Skylos Foundation</p>
+          </div>
+      </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="rehome.js"></script>
+</body>
+</html>

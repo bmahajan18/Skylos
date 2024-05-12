@@ -1,0 +1,190 @@
+
+.navbar {
+background-color: #F0544F;
+color: white;}
+.logo {
+  font-family: 'Beth Ellen';
+}
+.centered-text {
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ width: 60%;
+ max-width: 600px; 
+ font-family: sans-serif;
+ font-size: 18px;
+ line-height: 1.6;
+ letter-spacing: 0.5px;
+ color: #333;
+}
+#tabcontainer a {
+  color: #FFFFFF; 
+  text-decoration: none; 
+  padding: 8px 15px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+}
+
+#tabcontainer a:hover {
+   
+  color: #FFFFFF; 
+}
+.special-text {
+ font-family: sans-serif; 
+ font-size: 28px; 
+ font-weight: bold; 
+ color: #ff6600; 
+}
+.title-text {
+margin-top: 0; 
+padding-top: 0; 
+margin-bottom: 20px; 
+text-align: center; 
+font-weight: bold;
+color: #000;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+font-family: 'Beth Ellen';
+}
+.flex-container {
+display: flex;
+align-items: center; /* Vertically center align items */
+max-width: 100%;
+margin: 0 auto;
+}
+
+.content-container {
+flex: 1;
+padding-left: 20px;
+text-align: left;
+}
+
+.image-container {
+flex: 1;
+padding-right: 20px;
+}
+
+.image-container img {
+max-width: 100%;
+display: block;
+border-radius: 10px;
+}
+
+/* Add this CSS to control the image width within the container */
+.image-container img {
+max-width: 100%; /* Adjust this value as needed */
+height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+}
+
+.reviews-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 20px;
+justify-content: center; 
+margin: 0 auto; 
+}
+
+.review {
+position: relative;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.review img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 10px;
+}
+
+.review h3 {
+font-size: 20px;
+font-weight: bold;
+color: #000;
+}
+
+.review p {
+font-size: 16px;
+line-height: 1.4;
+}
+
+.rating {
+font-size: 24px;
+color: #ffc107;
+}
+
+.arrows {
+text-align: center;
+margin-top: 20px;
+}
+.arrow {
+cursor: pointer;
+font-size: 24px;
+padding: 0 10px;
+}
+.left-arrow {
+float: left;
+}
+
+.right-arrow {
+float: right;
+}
+.contact-section {
+text-align: center;
+margin-top: 50px;
+}
+
+.contact-items {
+display: flex;
+justify-content: space-between; /* Align items side by side */
+flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+max-width: 800px; /* Adjust as needed */
+margin: 0 auto;
+}
+
+.contact-column,
+.address-column {
+flex-basis: calc(50% - 20px); /* Adjust width and spacing as needed */
+}
+
+.contact-item {
+font-family: sans-serif;
+font-size: 18px;
+line-height: 1.6;
+letter-spacing: 0.5px;
+color: #333;
+display: flex;
+align-items: center;
+}
+
+.contact-item img {
+margin-right: 10px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+.contact-column,
+.address-column {
+flex-basis: calc(33.33% - 20px); /* Adjust width and spacing for larger screens */
+}
+}
+
+/* Add this CSS to set the font-weight to normal for the address elements */
+.address-column h6 {
+font-weight: normal;
+}
+.centered-text {
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+width: 100%; /* Adjust this value as needed */
+max-width: 1200px; /* Adjust this value as needed */
+font-family: sans-serif;
+font-size: 18px;
+line-height: 1.6;
+letter-spacing: 0.5px;
+color: #333;
+}
+
